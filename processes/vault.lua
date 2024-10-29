@@ -22,7 +22,7 @@ function SecretVault.authorized(From)
 end
 
 -- Set value in nested table based on dot-separated path
-local function setNestedValue(table, path, value)
+function SecretVault.setNestedValue(table, path, value)
     local current = table
     for segment in string.gmatch(path, "[^%.]+") do
         if not current[segment] then
@@ -34,7 +34,7 @@ local function setNestedValue(table, path, value)
 end
 
 -- Notify all PubSub users of a change
-local function notifyPubSub(action, path, newController)
+function SecretVault.notifyPubSub(action, path, newController)
     for _, subscriber in ipairs(SecretVault.PubSub) do
         local message = {
             Target = subscriber,
@@ -47,7 +47,7 @@ local function notifyPubSub(action, path, newController)
 end
 
 -- Notify owner of unauthorized access attempts
-local function notifyUnauthorized(action, from)
+function SecretVault.notifyUnauthorized(action, from)
     local message = {
         Target = ao.env.process.Owner,
         Action = "Unauthorized Attempt - Notification",
@@ -60,23 +60,23 @@ Handlers.add(
     Handlers.utils.hasMatchingTag("Action", SecretVault.actions.set),
     function(msg)
         if msg.From ~= ao.env.process.Owner then
-            notifyUnauthorized(SecretVault.actions.set, msg.From)
+            SecretVault.notifyUnauthorized(SecretVault.actions.set, msg.From)
         end
         assert(msg.From == ao.env.process.Owner, "unauthorized")
         assert(msg.Path, "No Path provided")
         assert(msg.Value, "No Value provided")
 
-        setNestedValue(SecretVault.State, msg.Path, msg.Value)
+        SecretVault.setNestedValue(SecretVault.State, msg.Path, msg.Value)
 
         local message = {
             Target = msg.From,
-            Action = actions.set .. " - Notification",
+            Action = SecretVault.actions.set .. " - Notification",
             Path = msg.Path,
             Value = msg.Value,
             Data = "Value set successfully"
         }
         ao.Send(message)
-        notifyPubSub(SecretVault.actions.set, msg.Path)
+        SecretVault.notifyPubSub(SecretVault.actions.set, msg.Path)
     end
 )
 
@@ -85,7 +85,7 @@ Handlers.add(
     function(msg)
         local isAuthorized = SecretVault.authorized(msg.From)
         if not isAuthorized then
-            notifyUnauthorized(SecretVault.actions.get, msg.From)
+            SecretVault.notifyUnauthorized(SecretVault.actions.get, msg.From)
         end
         assert(isAuthorized, "unauthorized")
 
@@ -101,7 +101,7 @@ Handlers.add(
 
         local message = {
             Target = msg.From,
-            Action = actions.get .. " - Notification",
+            Action = SecretVault.actions.get .. " - Notification",
             Path = msg.Path,
             Value = data,
             Data = data
@@ -114,7 +114,7 @@ Handlers.add(
     Handlers.utils.hasMatchingTag("Action", SecretVault.actions.addController),
     function(msg)
         if msg.From ~= ao.env.process.Owner then
-            notifyUnauthorized(SecretVault.actions.addController, msg.From)
+            SecretVault.notifyUnauthorized(SecretVault.actions.addController, msg.From)
         end
         assert(msg.From == ao.env.process.Owner, "unauthorized")
         assert(msg["New-User"], "New User not provided")
@@ -123,7 +123,7 @@ Handlers.add(
 
         local message = {
             Target = msg.From,
-            Action = actions.addController .. " - Notification",
+            Action = SecretVault.actions.addController .. " - Notification",
             ["New-User"] = msg["New-User"],
             Data = "User " .. msg["New-User"] .. " added successfully as a controller"
         }
@@ -133,7 +133,7 @@ Handlers.add(
             Action = SecretVault.actions.addController .. " - Notification",
             Data = "You have been added as an authorized controller for SecretVault"
         })
-        notifyPubSub(SecretVault.actions.addController, nil, msg["New-User"])
+        SecretVault.notifyPubSub(SecretVault.actions.addController, nil, msg["New-User"])
     end
 )
 
@@ -141,7 +141,7 @@ Handlers.add(
     Handlers.utils.hasMatchingTag("Action", SecretVault.actions.addPubSub),
     function(msg)
         if msg.From ~= ao.env.process.Owner then
-            notifyUnauthorized(SecretVault.actions.addPubSub, msg.From)
+            SecretVault.notifyUnauthorized(SecretVault.actions.addPubSub, msg.From)
         end
         assert(msg.From == ao.env.process.Owner, "unauthorized")
         assert(msg["New-User"], "New User not provided")
@@ -161,3 +161,6 @@ Handlers.add(
         })
     end
 )
+
+
+return SecretVault
