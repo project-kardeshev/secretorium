@@ -1,0 +1,20 @@
+{
+  "name": "secretorium",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/project-kardeshev/secretorium",
+  "author": "bobinstein <cavanaugh.stephen1991@gmail.com>",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build:registry": "node tools/bundle-aos.js --path=\"./processes/registry.lua\" --output=\"./dist/registry/aos-bundled.lua\"",
+    "build:vault": "node tools/bundle-aos.js --path=\"./processes/vault.lua\" --output=\"./dist/vault/aos-bundled.lua\""
+  },
+  "devDependencies": {
+    "@permaweb/ao-loader": "^0.0.43",
+    "@permaweb/aoconnect": "^0.0.59",
+    "arweave": "^1.15.5",
+    "fs-extra": "^11.2.0",
+    "prettier": "^3.3.3"
+  }
+}

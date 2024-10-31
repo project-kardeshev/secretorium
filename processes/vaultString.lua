@@ -1,3 +1,8 @@
+vaultString = [=[
+
+
+
+
 local json = require('json')
 
 SecretVault = SecretVault or {}
@@ -184,3 +189,8 @@ Handlers.add(
 
 
 return SecretVault
+
+
+]=]
+
+return vaultString
