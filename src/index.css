@@ -1,0 +1,13 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@layer base {
+  body {
+    @apply bg-background;
+  }
+
+  .modal-container {
+    @apply fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm backdrop-filter scrollbar-thumb-primary;
+  }
+}
