@@ -1,10 +1,8 @@
 import * as fs from 'fs';
 import * as path from 'path';
-import { fileURLToPath } from 'url';
 
 import { bundle } from './lua-bundler.js';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 async function main() {
   const args = process.argv.slice(2); // Get CLI arguments
   const pathArg = args.find((arg) => arg.startsWith('--path='));
