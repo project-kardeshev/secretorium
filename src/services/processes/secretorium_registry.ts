@@ -1,4 +1,4 @@
-import { Process, ProcessReadable, AO } from '@project-kardeshev/ao-sdk';
+import { AO, Process, ProcessReadable } from '@project-kardeshev/ao-sdk';
 import { SECRETORIUM_REGISTRY_ID } from '@src/constants';
 
 interface SecretoriumRegistryReadable {
@@ -15,7 +15,7 @@ export class SecretoriumRegistryProcessReadable {
   constructor({ processId = SECRETORIUM_REGISTRY_ID }: { processId: string }) {
     this.process = Process.init({
       processId,
-      ao: new AO({})
+      ao: new AO({}),
     }) as ProcessReadable;
   }
 }
