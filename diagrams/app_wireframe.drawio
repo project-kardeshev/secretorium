@@ -1,0 +1,400 @@
+<mxfile host="65bd71144e">
+    <diagram id="4jWFpiN61FUs_9iCBLqQ" name="Page-1">
+        <mxGraphModel dx="1175" dy="2085" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="3" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="180" y="-370" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="190" y="-320" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="260" y="70" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="210" y="-190" width="140" height="140" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="245" y="-90" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="315" y="-135" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="235" y="-170" width="30" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="250" y="-150" width="60" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="740" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="790" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="1180" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="860" width="160" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="Access Requests" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="830" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="870" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="910" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="18" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="950" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="990" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="20" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="1030" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="1070" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="22" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="1100" y="175" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="23" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1110" y="225" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="620" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="295" width="160" height="95" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="&amp;lt;my_vault&amp;gt;/Secrets" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1140" y="265" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1125" y="305" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1125" y="345" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="33" value="0x.." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="490" y="875" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="37" value="" style="strokeColor=#999999;verticalLabelPosition=bottom;shadow=0;dashed=0;verticalAlign=top;strokeWidth=2;html=1;shape=mxgraph.mockup.misc.editIcon;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="310" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="38" value="GITHUB_API" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1125" y="305" width="95" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="39" value="OPEN_API_KEY" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1125" y="352.5" width="100" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="40" value="" style="strokeColor=#999999;verticalLabelPosition=bottom;shadow=0;dashed=0;verticalAlign=top;strokeWidth=2;html=1;shape=mxgraph.mockup.misc.editIcon;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1250" y="347.5" width="20" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="41" value="Vaults" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1120" y="240" width="43.5" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="42" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="170" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="43" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="460" y="220" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="44" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="610" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="45" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="290" width="160" height="310" as="geometry"/>
+                </mxCell>
+                <mxCell id="46" value="vault 1" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="295" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="47" value="vault 2" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="335" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="50" value="Vaults" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="255" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="51" value="Home" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="470" y="240" width="43.5" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="52" value="Home" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="475" y="800" width="43.5" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="120" style="edgeStyle=none;html=1;" parent="1" source="53" target="111" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="53" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="680" y="740" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="121" style="edgeStyle=none;html=1;" parent="1" source="54" target="112" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="54" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="690" y="790" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="55" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="1180" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="56" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="830" width="160" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="65" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="810" y="1132.5" width="30" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="66" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iDeleteApp;fillColor=#cccccc;fillColor2=#000000;strokeColor=#ffffff;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="722.5" y="1131.5" width="30" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="67" value="Access Requests" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="700" y="800" width="75" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="69" value="OPEN_API_KEY" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="702.5" y="835" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="70" value="From: 0x... | Atticus" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="702.5" y="885" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="71" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="820" y="875" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="72" value="Date: Oct 17 2024" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="702.5" y="920" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="73" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.user;fillColor=#D2D3D3;gradientColor=none;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="830" y="878.5" width="20" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="76" value="OPEN_API_KEY_10" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="702.5" y="990" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="77" value="Associated Vaults" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="692.5" y="950" width="167.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="78" value="GH_PUBLISH" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="702.5" y="1020" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="79" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="910" y="1170" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="80" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="920" y="1220" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="81" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="990" y="1610" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="82" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="1260" width="160" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="83" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1040" y="1562.5" width="30" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="84" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iDeleteApp;fillColor=#cccccc;fillColor2=#000000;strokeColor=#ffffff;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="952.5" y="1561.5" width="30" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="85" value="Access Requests" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="930" y="1230" width="75" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="86" value="OPEN_API_KEY" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="932.5" y="1265" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="87" value="From: 0x... | Atticus" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="932.5" y="1315" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="88" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1050" y="1305" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="89" value="Date: Oct 17 2024" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="932.5" y="1350" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="90" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.user;fillColor=#D2D3D3;gradientColor=none;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1060" y="1308.5" width="20" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="91" value="OPEN_API_KEY_10" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="932.5" y="1420" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="92" value="Associated Vaults" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="922.5" y="1380" width="167.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="93" value="GH_PUBLISH" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="932.5" y="1450" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="94" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="1180" y="1170" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="95" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1190" y="1220" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="96" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="1260" y="1610" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="97" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="1260" width="160" height="340" as="geometry"/>
+                </mxCell>
+                <mxCell id="98" value="" style="sketch=0;html=1;aspect=fixed;strokeColor=none;shadow=0;align=center;verticalAlign=top;fillColor=#2D9C5E;shape=mxgraph.gcp2.check;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1310" y="1562.5" width="30" height="24" as="geometry"/>
+                </mxCell>
+                <mxCell id="99" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iDeleteApp;fillColor=#cccccc;fillColor2=#000000;strokeColor=#ffffff;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1222.5" y="1561.5" width="30" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="100" value="Access Requests" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1200" y="1230" width="75" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="101" value="OPEN_API_KEY" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1202.5" y="1265" width="155" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="102" value="From: 0x... | Atticus" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1202.5" y="1315" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="103" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1320" y="1305" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="104" value="Date: Oct 17 2024" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1202.5" y="1350" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="105" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.user;fillColor=#D2D3D3;gradientColor=none;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1330" y="1308.5" width="20" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="106" value="OPEN_API_KEY_10" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1202.5" y="1420" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="107" value="Associated Vaults" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1192.5" y="1380" width="167.5" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="108" value="GH_PUBLISH" style="rounded=1;whiteSpace=wrap;html=1;align=left;" parent="1" vertex="1">
+                    <mxGeometry x="1202.5" y="1450" width="155" height="20" as="geometry"/>
+                </mxCell>
+                <mxCell id="111" value="Reject" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="940" y="1080" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="112" value="Accept" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1216.25" y="1080" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="113" value="Are you sure you want to decline the secret request?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="917.5" y="1320" width="182.5" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="114" value="Confirm" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1030" y="1490" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="115" value="Cancel" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="952.5" y="1490" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="116" value="Are you sure you want to Accept the secret request?" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1188.75" y="1325" width="182.5" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="117" value="Confirm" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1301.25" y="1495" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="118" value="Cancel" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1223.75" y="1495" width="50" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="119" value="End workflow and return to requests" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="922.5" y="1730" width="447.5" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="124" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="1330" y="175" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="125" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="1340" y="225" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="127" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="270" width="160" height="390" as="geometry"/>
+                </mxCell>
+                <mxCell id="131" value="Secrets" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="245" width="43.5" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="132" value="OPEN_API_KEY" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1350" y="270" width="160" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="134" value="Collaborators 3/254" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1356.25" y="410" width="147.5" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="135" value="Atticus" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1356.25" y="465" width="147.5" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="136" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="1353.5" y="457.5" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="138" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.user;fillColor=#D2D3D3;gradientColor=none;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1363.5" y="461" width="20" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="139" value="Atticus" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1356.25" y="512.5" width="147.5" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="140" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="1353.5" y="505" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="141" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.user;fillColor=#D2D3D3;gradientColor=none;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1363.5" y="508.5" width="20" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="142" value="Atticus" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="1356.38" y="557.5" width="147.5" height="25" as="geometry"/>
+                </mxCell>
+                <mxCell id="143" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="1353.63" y="550" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="144" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.user;fillColor=#D2D3D3;gradientColor=none;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1363.63" y="553.5" width="20" height="33" as="geometry"/>
+                </mxCell>
+                <mxCell id="145" value="Change" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#60a917;fontColor=#ffffff;strokeColor=#2D7600;" parent="1" vertex="1">
+                    <mxGeometry x="1358.75" y="317.5" width="145" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="147" value="Delete" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#a20025;fontColor=#ffffff;strokeColor=#6F0000;" parent="1" vertex="1">
+                    <mxGeometry x="1358.75" y="355" width="145" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="148" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iDeleteApp;fillColor=#fad9d5;fillColor2=#000000;strokeColor=#ae4132;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1482.5" y="470" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="149" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iDeleteApp;fillColor=#fad9d5;fillColor2=#000000;strokeColor=#ae4132;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1482.5" y="517.5" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="150" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.ios.iDeleteApp;fillColor=#fad9d5;fillColor2=#000000;strokeColor=#ae4132;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="1482.5" y="562.5" width="15" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="152" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" parent="1" vertex="1">
+                    <mxGeometry x="710" y="170" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="153" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" parent="1" vertex="1">
+                    <mxGeometry x="720" y="220" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="154" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" parent="1" vertex="1">
+                    <mxGeometry x="790" y="615" width="40" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="155" value="" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="290" width="160" height="320" as="geometry"/>
+                </mxCell>
+                <mxCell id="156" value="&amp;lt;my_vault&amp;gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="260" width="70" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="157" value="" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="735" y="300" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="158" value="Vault Name" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="735" y="340" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="160" value="Secrets" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="760" y="300" width="95" height="35" as="geometry"/>
+                </mxCell>
+                <mxCell id="163" value="Vaults" style="strokeWidth=1;html=1;shadow=0;dashed=0;shape=mxgraph.ios.iButtonBack;strokeColor=#444444;fontColor=#ffffff;buttonText=;fontSize=8;fillColor=#dddddd;fillColor2=#3D5565;spacingLeft=10;whiteSpace=wrap;align=center;sketch=0;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="730" y="235" width="43.5" height="15" as="geometry"/>
+                </mxCell>
+                <mxCell id="165" value="Controllers" style="rounded=1;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+                    <mxGeometry x="735" y="385" width="150" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="166" value="" style="verticalLabelPosition=bottom;verticalAlign=top;html=1;shadow=0;dashed=0;strokeWidth=1;shape=mxgraph.android.phone2;strokeColor=#c0c0c0;" vertex="1" parent="1">
+                    <mxGeometry x="170" y="190" width="200" height="540" as="geometry"/>
+                </mxCell>
+                <mxCell id="167" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#008a00;fontColor=#ffffff;strokeColor=#005700;" vertex="1" parent="1">
+                    <mxGeometry x="180" y="240" width="180" height="440" as="geometry"/>
+                </mxCell>
+                <mxCell id="168" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+                    <mxGeometry x="250" y="630" width="40" height="40" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
