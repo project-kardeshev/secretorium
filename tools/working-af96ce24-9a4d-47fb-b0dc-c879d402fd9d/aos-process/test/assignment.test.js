@@ -1,35 +1,34 @@
-import { describe, test } from "node:test";
-import * as assert from "node:assert";
-import fs from "node:fs";
+import AoLoader from '@permaweb/ao-loader';
+import * as assert from 'node:assert';
+import fs from 'node:fs';
+import { describe, test } from 'node:test';
 
-import AoLoader from "@permaweb/ao-loader";
-
-const wasm = fs.readFileSync("./process.wasm");
-const options = { format: "wasm64-unknown-emscripten-draft_2024_02_15" };
+const wasm = fs.readFileSync('./process.wasm');
+const options = { format: 'wasm64-unknown-emscripten-draft_2024_02_15' };
 
 const env = {
   Process: {
-    Id: "AOS",
-    Owner: "FOOBAR",
-    Tags: [{ name: "Name", value: "Thomas" }],
+    Id: 'AOS',
+    Owner: 'FOOBAR',
+    Tags: [{ name: 'Name', value: 'Thomas' }],
   },
 };
 
-describe("add the assignable MatchSpec", async () => {
-  test("by name", async () => {
+describe('add the assignable MatchSpec', async () => {
+  test('by name', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "AOS",
-      From: "FOOBAR",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      From: 'FOOBAR',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable('foobar', function (msg) return true end)
@@ -41,24 +40,24 @@ describe("add the assignable MatchSpec", async () => {
 
     assert.deepStrictEqual(JSON.parse(result.Messages[0].Data), {
       length: 1,
-      name: "foobar",
+      name: 'foobar',
     });
   });
 
-  test("update by name", async () => {
+  test('update by name', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "AOS",
-      From: "FOOBAR",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      From: 'FOOBAR',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable('foobar', function (msg) return true end)
@@ -71,24 +70,24 @@ describe("add the assignable MatchSpec", async () => {
 
     assert.deepStrictEqual(JSON.parse(result.Messages[0].Data), {
       length: 1,
-      name: "foobar",
+      name: 'foobar',
     });
   });
 
-  test("by index", async () => {
+  test('by index', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "AOS",
-      From: "FOOBAR",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      From: 'FOOBAR',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return true end)
@@ -101,20 +100,20 @@ describe("add the assignable MatchSpec", async () => {
     assert.deepStrictEqual(JSON.parse(result.Messages[0].Data), { length: 1 });
   });
 
-  test("require name to be a string", async () => {
+  test('require name to be a string', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "AOS",
-      From: "FOOBAR",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      From: 'FOOBAR',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(1234, function (msg) return true end)
@@ -123,25 +122,25 @@ describe("add the assignable MatchSpec", async () => {
 
     const result = await handle(null, msg, env);
 
-    assert.ok(result.Error.includes("MatchSpec name MUST be a string"));
+    assert.ok(result.Error.includes('MatchSpec name MUST be a string'));
   });
 });
 
-describe("remove the assignable MatchSpec", () => {
-  test("by name", async () => {
+describe('remove the assignable MatchSpec', () => {
+  test('by name', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "AOS",
-      From: "FOOBAR",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      From: 'FOOBAR',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return true end)
@@ -157,25 +156,25 @@ describe("remove the assignable MatchSpec", () => {
 
     assert.deepStrictEqual(JSON.parse(result.Messages[0].Data), {
       length: 2,
-      name: "foobar",
+      name: 'foobar',
     });
     assert.deepStrictEqual(JSON.parse(result.Messages[1].Data), { length: 1 });
   });
 
-  test("by index", async () => {
+  test('by index', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "AOS",
-      From: "FOOBAR",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      From: 'FOOBAR',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return true end)
@@ -191,28 +190,28 @@ describe("remove the assignable MatchSpec", () => {
 
     assert.deepStrictEqual(JSON.parse(result.Messages[0].Data), {
       length: 2,
-      name: "foobar",
+      name: 'foobar',
     });
     assert.deepStrictEqual(JSON.parse(result.Messages[1].Data), {
       length: 1,
-      name: "foobar",
+      name: 'foobar',
     });
   });
 
-  test("require name to be a string or number", async () => {
+  test('require name to be a string or number', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "AOS",
-      From: "FOOBAR",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      From: 'FOOBAR',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.removeAssignable({})
@@ -220,24 +219,24 @@ describe("remove the assignable MatchSpec", () => {
     };
 
     const result = await handle(null, msg, env);
-    assert.ok(result.Error.includes("index MUST be a number"));
+    assert.ok(result.Error.includes('index MUST be a number'));
   });
 });
 
-describe("determine whether the msg is an assignment or not", () => {
-  test("is an assignment", async () => {
+describe('determine whether the msg is an assignment or not', () => {
+  test('is an assignment', async () => {
     const handle = await AoLoader(wasm, options);
 
     const addAssignableMsg = {
-      Target: "AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return true end)
@@ -254,39 +253,39 @@ describe("determine whether the msg is an assignment or not", () => {
     const { Memory } = await handle(null, addAssignableMsg, env);
 
     const msg = {
-      Target: "NOT_AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'NOT_AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "IsAssignment" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'IsAssignment' },
+        { name: 'Name', value: 'Thomas' },
       ],
-      Data: "foobar",
+      Data: 'foobar',
     };
 
     const result = await handle(Memory, msg, env);
     assert.deepStrictEqual(JSON.parse(result.Messages[0].Data), {
-      id: "1234xyxfoo",
+      id: '1234xyxfoo',
       isAssignment: true,
     });
   });
 
-  test("is NOT an assignment", async () => {
+  test('is NOT an assignment', async () => {
     const handle = await AoLoader(wasm, options);
 
     const addAssignableMsg = {
-      Target: "AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return true end)
@@ -303,42 +302,42 @@ describe("determine whether the msg is an assignment or not", () => {
     const { Memory } = await handle(null, addAssignableMsg, env);
 
     const msg = {
-      Target: "AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "IsAssignment" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'IsAssignment' },
+        { name: 'Name', value: 'Thomas' },
       ],
-      Data: "foobar",
+      Data: 'foobar',
     };
 
     const result = await handle(Memory, msg, env);
 
     assert.deepStrictEqual(JSON.parse(result.Messages[0].Data), {
-      id: "1234xyxfoo",
+      id: '1234xyxfoo',
       isAssignment: false,
     });
   });
 });
 
-describe("run handles on assignment based on assignables configured", () => {
-  test("at least 1 assignable allows specific assignment", async () => {
+describe('run handles on assignment based on assignables configured', () => {
+  test('at least 1 assignable allows specific assignment', async () => {
     const handle = await AoLoader(wasm, options);
 
     const addAssignableMsg = {
-      Target: "AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return msg.Name == 'Frank' end)
@@ -349,36 +348,36 @@ describe("run handles on assignment based on assignables configured", () => {
     const { Memory } = await handle(null, addAssignableMsg, env);
 
     const msg = {
-      Target: "NOT_AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'NOT_AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
-      Data: "2 + 2",
+      Data: '2 + 2',
     };
 
     const result = await handle(Memory, msg, env);
-    assert.deepStrictEqual(result.Output.data, "4");
+    assert.deepStrictEqual(result.Output.data, '4');
   });
 
-  test("assignables do NOT allow specific assignment", async () => {
+  test('assignables do NOT allow specific assignment', async () => {
     const handle = await AoLoader(wasm, options);
 
     const addAssignableMsg = {
-      Target: "AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return msg.Name == 'Frank' end)
@@ -389,39 +388,39 @@ describe("run handles on assignment based on assignables configured", () => {
     const { Memory } = await handle(null, addAssignableMsg, env);
 
     const msg = {
-      Target: "NOT_AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'NOT_AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Not-Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Not-Thomas' },
       ],
-      Data: "2 + 2",
+      Data: '2 + 2',
     };
 
     const result = await handle(Memory, msg, env);
     assert.deepStrictEqual(
       result.Messages[0].Data,
-      "Assignment is not trusted by this process!",
+      'Assignment is not trusted by this process!',
     );
   });
 
-  test("assignable does NOT allow specific assignment", async () => {
+  test('assignable does NOT allow specific assignment', async () => {
     const handle = await AoLoader(wasm, options);
 
     const addAssignableMsg = {
-      Target: "AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Thomas' },
       ],
       Data: `
         ao.addAssignable(function (msg) return msg.Name == 'Thomas' end)
@@ -431,47 +430,47 @@ describe("run handles on assignment based on assignables configured", () => {
     const { Memory } = await handle(null, addAssignableMsg, env);
 
     const msg = {
-      Target: "NOT_AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'NOT_AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Not-Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Not-Thomas' },
       ],
-      Data: "2 + 2",
+      Data: '2 + 2',
     };
 
     const result = await handle(Memory, msg, env);
     assert.deepStrictEqual(
       result.Messages[0].Data,
-      "Assignment is not trusted by this process!",
+      'Assignment is not trusted by this process!',
     );
   });
 
-  test("no assignables defaults to no assignments allowed", async () => {
+  test('no assignables defaults to no assignments allowed', async () => {
     const handle = await AoLoader(wasm, options);
 
     const msg = {
-      Target: "NOT_AOS",
-      Owner: "FOOBAR",
-      "Block-Height": "1000",
-      Id: "1234xyxfoo",
-      From: "FOOBAR",
-      Module: "WOOPAWOOPA",
+      Target: 'NOT_AOS',
+      Owner: 'FOOBAR',
+      'Block-Height': '1000',
+      Id: '1234xyxfoo',
+      From: 'FOOBAR',
+      Module: 'WOOPAWOOPA',
       Tags: [
-        { name: "Action", value: "Eval" },
-        { name: "Name", value: "Not-Thomas" },
+        { name: 'Action', value: 'Eval' },
+        { name: 'Name', value: 'Not-Thomas' },
       ],
-      Data: "2 + 2",
+      Data: '2 + 2',
     };
 
     const result = await handle(null, msg, env);
     assert.deepStrictEqual(
       result.Messages[0].Data,
-      "Assignment is not trusted by this process!",
+      'Assignment is not trusted by this process!',
     );
   });
 });

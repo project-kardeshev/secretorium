@@ -1,5 +1,5 @@
-import fs from "fs";
-import path from "path";
+import fs from 'fs';
+import path from 'path';
 
 /**
  * @typedef Module
@@ -13,7 +13,7 @@ import path from "path";
  * @returns {[string, Module[]]}
  */
 function createExecutableFromProject(project) {
-  const getModFnName = (name) => name.replace(/\./g, "_").replace(/^_/, "");
+  const getModFnName = (name) => name.replace(/\./g, '_').replace(/^_/, '');
   /** @type {Module[]} */
   const contents = [];
 
@@ -26,9 +26,13 @@ function createExecutableFromProject(project) {
     const existing = contents.find((m) => m.path === mod.path);
     const moduleContent =
       (!existing &&
-        `-- module: "${mod.name}"\nlocal function _loaded_mod_${getModFnName(mod.name)}()\n${mod.content}\nend\n`) ||
-      "";
-    const requireMapper = `\n_G.package.loaded["${mod.name}"] = _loaded_mod_${getModFnName(existing?.name || mod.name)}()`;
+        `-- module: "${mod.name}"\nlocal function _loaded_mod_${getModFnName(
+          mod.name,
+        )}()\n${mod.content}\nend\n`) ||
+      '';
+    const requireMapper = `\n_G.package.loaded["${
+      mod.name
+    }"] = _loaded_mod_${getModFnName(existing?.name || mod.name)}()`;
 
     contents.push({
       ...mod,
@@ -40,7 +44,7 @@ function createExecutableFromProject(project) {
   contents.push(project[project.length - 1]);
 
   return [
-    contents.reduce((acc, con) => acc + "\n\n" + con.content, ""),
+    contents.reduce((acc, con) => acc + '\n\n' + con.content, ''),
     contents,
   ];
 }
@@ -92,13 +96,13 @@ function exploreNodes(node, cwd) {
   if (!fs.existsSync(node.path)) return [];
 
   // set content
-  node.content = fs.readFileSync(node.path, "utf-8");
+  node.content = fs.readFileSync(node.path, 'utf-8');
 
   const requirePattern = /(?<=(require( *)(\n*)(\()?( *)("|'))).*(?=("|'))/g;
   const requiredModules =
     node.content.match(requirePattern)?.map((mod) => ({
       name: mod,
-      path: path.join(cwd, mod.replace(/\./g, "/") + ".lua"),
+      path: path.join(cwd, mod.replace(/\./g, '/') + '.lua'),
       content: undefined,
     })) || [];
 

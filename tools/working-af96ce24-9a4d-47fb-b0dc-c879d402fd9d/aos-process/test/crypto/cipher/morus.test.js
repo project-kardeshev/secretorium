@@ -1,26 +1,26 @@
-import { test } from "node:test";
-import * as assert from "node:assert";
-import AoLoader from "@permaweb/ao-loader";
-import fs from "fs";
+import AoLoader from '@permaweb/ao-loader';
+import fs from 'fs';
+import * as assert from 'node:assert';
+import { test } from 'node:test';
 
-const wasm = fs.readFileSync("./process.wasm");
+const wasm = fs.readFileSync('./process.wasm');
 
-const options = { format: "wasm64-unknown-emscripten-draft_2024_02_15" };
-test("run morus cipher successfully", async () => {
+const options = { format: 'wasm64-unknown-emscripten-draft_2024_02_15' };
+test('run morus cipher successfully', async () => {
   const handle = await AoLoader(wasm, options);
   const env = {
     Process: {
-      Id: "AOS",
-      Owner: "FOOBAR",
-      Tags: [{ name: "Name", value: "Thomas" }],
+      Id: 'AOS',
+      Owner: 'FOOBAR',
+      Tags: [{ name: 'Name', value: 'Thomas' }],
     },
   };
 
   const results = [
-    "514ed31473d8fb0b76c6cbb17af35ed01d0a",
-    "ao",
-    "6164646974696f6e616c20646174616aae7a8b95c50047bea251c3b7133eec5fcc",
-    "ao",
+    '514ed31473d8fb0b76c6cbb17af35ed01d0a',
+    'ao',
+    '6164646974696f6e616c20646174616aae7a8b95c50047bea251c3b7133eec5fcc',
+    'ao',
   ];
 
   const data = `
@@ -55,17 +55,17 @@ test("run morus cipher successfully", async () => {
 		return table.concat(results, ", ");
 	`;
   const msg = {
-    Target: "AOS",
-    From: "FOOBAR",
-    Owner: "FOOBAR",
-    ["Block-Height"]: "1000",
-    Id: "1234xyxfoo",
-    Module: "WOOPAWOOPA",
-    Tags: [{ name: "Action", value: "Eval" }],
+    Target: 'AOS',
+    From: 'FOOBAR',
+    Owner: 'FOOBAR',
+    ['Block-Height']: '1000',
+    Id: '1234xyxfoo',
+    Module: 'WOOPAWOOPA',
+    Tags: [{ name: 'Action', value: 'Eval' }],
     Data: data,
   };
 
   const result = await handle(null, msg, env);
-  assert.equal(result.Output?.data, results.join(", "));
+  assert.equal(result.Output?.data, results.join(', '));
   assert.ok(true);
 });
