@@ -6,8 +6,8 @@ import Modal from './Modal';
 export function RadialMenuModal({
   items,
   visible,
-  radius = 135,
-  innerRadius = 110,
+  radius = 130,
+  innerRadius = 80,
 }: {
   items: {
     label: string;
@@ -28,17 +28,20 @@ export function RadialMenuModal({
       modalClasses={`
         relative 
         rounded-full 
-        w-[320px] 
-        h-[320px] 
+        w-[350px] 
+        h-[350px] 
         flex 
         justify-center 
         items-center 
         border border-secondary 
+        shadow-3xl
       `}
       modalStyle={{
-        background: `radial-gradient(circle, transparent ${innerRadius}px, #4E2E1E ${
-          innerRadius + 2
-        }px, rgba(0, 0, 0, 0.5) ${innerRadius}px, rgba(0, 0, 0, 0.5) 100%)`,
+        background: `radial-gradient(circle, transparent ${
+          innerRadius - 5
+        }px, rgba(0, 0, 0, 0.7) ${innerRadius - 5}px, rgba(0, 0, 0, 0.5) ${
+          innerRadius + 5
+        }px, rgba(0, 0, 0, 0.5) 100%)`,
       }}
       onClickOutside={() => setShowMenu(false)}
     >

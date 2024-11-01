@@ -1,4 +1,4 @@
-import { Home, Layout, NotFound } from '@pages/index';
+import { Home, Layout, NotFound, Vaults } from '@pages/index';
 import {
   Route,
   RouterProvider,
@@ -12,6 +12,7 @@ function App() {
       <>
         <Route element={<Layout />} errorElement={<NotFound />}>
           <Route path="/" element={<Home />} />
+          <Route path="/vaults" element={<Vaults />} />
           <Route path="*" element={<NotFound />} />
         </Route>
       </>,

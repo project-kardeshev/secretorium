@@ -33,7 +33,11 @@ export function AppBar() {
           onClick={handleClick}
           className="text-white rounded-full bg-[rgb(0,0,0,0.5)] hover:scale-110 transition-all shadow-3xl"
         >
-          <img width={'75px'} src={'/favicon.webp'} className="rounded-full" />
+          <img
+            width={'75px'}
+            src={'/images/menu-icon.webp'}
+            className="rounded-full"
+          />
         </button>
       )}
     </div>

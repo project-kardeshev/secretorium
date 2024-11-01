@@ -21,7 +21,7 @@ export default {
       bold: 700,
     },
     backgroundImage: {
-      'hero-pattern': "url('/images/hero.webp')",
+      temple: "url('/images/temple-background.webp')",
       'bronze-gradient': 'linear-gradient(135deg, #1f1f1f, #4E2E1E, #B87333);',
     },
     colors: {
