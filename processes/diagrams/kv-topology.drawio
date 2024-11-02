@@ -1,0 +1,55 @@
+<mxfile host="65bd71144e">
+    <diagram id="MbuvBxkvtzVM7U2rt_h6" name="Page-1">
+        <mxGraphModel dx="2809" dy="1888" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="10" style="edgeStyle=none;html=1;" edge="1" parent="1" source="2" target="7">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="kv-registry" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="140" y="200" width="120" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;h1&gt;KV-Registry Process&lt;/h1&gt;&lt;p&gt;The Registry tracks the IDs of owned and controlled remote KV process stores&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="-130" y="240" width="250" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="" style="group" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="90" y="490" width="100" height="120" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="KV" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="9">
+                    <mxGeometry width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="KV" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="9">
+                    <mxGeometry x="10" y="10" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="KV" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="9">
+                    <mxGeometry x="20" y="20" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="KV" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="9">
+                    <mxGeometry x="30" y="30" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="KV" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="9">
+                    <mxGeometry x="40" y="40" width="60" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;h1&gt;Remote KV Stores&lt;/h1&gt;&lt;p&gt;Remote KV stores implement a simple Set/Get api with an Owner and Controllers ACL. Owner can add subscribers that recieve state updates.&lt;/p&gt;&lt;p&gt;Use cases for this can include Records management for domains, Balances management for token processes, and any other JSON store application.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="210" y="510" width="280" height="210" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Application" style="shape=cube;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;darkOpacity=0.05;darkOpacity2=0.1;" vertex="1" parent="1">
+                    <mxGeometry x="420" y="190" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" value="" style="endArrow=classic;html=1;" edge="1" parent="1" source="12" target="2">
+                    <mxGeometry width="50" height="50" relative="1" as="geometry">
+                        <mxPoint x="600" y="450" as="sourcePoint"/>
+                        <mxPoint x="650" y="400" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="14" value="&lt;h1&gt;Apps&lt;/h1&gt;&lt;p&gt;Apps can boot up a registry and leverage it for creating KV-stores for various use CRUD use cases for their users. An app might be an SDK or another AO process.&lt;/p&gt;&lt;p&gt;The registry indexes by controllers and owners, allowing clients to retrieve remote storage processes and read/write to them as needed for managing a users information.&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="560" y="160" width="270" height="180" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" value="KV-Registry-Registry&lt;br&gt;&lt;br&gt;Use case: Application discovery&lt;br&gt;Applications can register their network to be included in searches and analytics observation&amp;nbsp;" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;" vertex="1" parent="1">
+                    <mxGeometry x="-40" y="-80" width="480" height="180" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

@@ -24,5 +24,11 @@
     "undernames",
     "Undernames",
     "UNDERNAMES"
-  ]
+  ],
+  "Lua.workspace.library": ["${addons}/ao/module/library"],
+  "Lua.workspace.checkThirdParty": true,
+  "[lua]": {
+    "editor.defaultFormatter": "JohnnyMorganz.stylua",
+    "editor.formatOnSave": true
+  }
 }
