@@ -108,7 +108,7 @@ function kv_store.init()
 
 	utils.createActionHandler(ActionMap.get, function(msg)
 		local value = kv_store.getStateValue(msg.Path)
-		assert(value, "No value foud at path")
+		assert(value, "No value found at path")
 
 		msg.reply({
 			Action = ActionMap.get .. "-Notice",
@@ -117,11 +117,16 @@ function kv_store.init()
 	end)
 
 	utils.createActionHandler(ActionMap.set, function(msg)
-		assert(kv_store.authorized(msg.From), "unauthorized")
 		assert(msg.Path, "No Path provided")
 		assert(msg.Data, "No Value provided - provide a value in the Data field")
+		assert(
+			acl.hasPermission(msg.From, ActionMap.set, msg.Path),
+			string.format("User %s is not authorized to set %s", msg.From, msg.Path)
+		)
+		local decodeStatus, decodeRes = pcall(json.decode, msg.Data)
+		local value = decodeStatus and decodeRes or msg.Data
 
-		kv_store.setNestedValue(State, msg.Path, msg.Data)
+		kv_store.setNestedValue(State, msg.Path, value)
 
 		msg.reply({
 			Action = ActionMap.set .. "-Notice",
@@ -174,7 +179,7 @@ function kv_store.init()
 	utils.createActionHandler(ActionMap.requestAuthorization, function(msg)
 		-- Extract role and permissions from the message
 		local role = msg.Role
-		local permissions = msg.Permissions
+		local permissions = json.decode(msg.Permissions)
 
 		-- Validate input
 		assert(type(role) == "string", "Role must be a string")
@@ -205,7 +210,7 @@ function kv_store.init()
 
 		local user = msg.Address
 		local role = msg.Role
-		local permissions = msg.Permissions
+		local permissions = json.decode(msg.Permissions)
 
 		assert(type(user) == "string", "User must be a string")
 		assert(type(role) == "string", "Role must be a string")
@@ -216,6 +221,8 @@ function kv_store.init()
 		end
 
 		acl.assignRole(user, role)
+		-- Remove the user's authorization request
+		acl.clearAuthorizationRequest(user)
 
 		msg.reply({
 			Action = ActionMap.authorize .. "-Notice",

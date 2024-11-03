@@ -33,35 +33,51 @@ function kvRegistry.init()
 	local KVStoreList = kvRegistry.KVStoreList
 	local defaultKvStoreName = "Key_Value_Store"
 
-	utils.createActionHandler(ActionMap.spawnKVProcess, function(msg)
+	utils.createActionHandler(ActionMap.spawnKVStore, function(msg)
 		-- initialize UserList[msg.From] if it doesn't exist
 		UserList[msg.From] = UserList[msg.From] or {
 			Owned = {},
 			Controlled = {},
 		}
-		local kvStoreSpawnMsg = Spawn(ao.env.Module.Id, {
+		Spawn(ao.env.Module.Id, {
 			Tags = {
 				["KV-Registry"] = ao.id,
 				["KV-Store-Name"] = msg["KV-Store-Name"] or defaultKvStoreName,
-				Creator = msg.From,
+				["X-Creator"] = msg.From,
 				Authority = ao.authorities[1],
 				["X-Original-Msg-Id"] = msg.Id,
 				["On-Boot"] = "Data",
 			},
 			Data = KVStoreCode,
-		}).receive({ Action = "Spawned", ["X-Original-Msg-Id"] = msg.Id })
+		})
+	end)
 
-		UserList[msg.From].Owned[kvStoreSpawnMsg.Process] = true
+	utils.createActionHandler("Spawned", function(msg)
+		local storeId = msg.Process
+		local creator = msg["X-Creator"]
+		local originalMsgId = msg["X-Original-Msg-Id"]
+		assert(storeId, "msg.Process is required")
+		assert(creator, "msg['X-Creator'] is required")
+		assert(originalMsgId, "msg['X-Original-Msg-Id'] is required")
 
-		KVStoreList[kvStoreSpawnMsg.Process] = {
-			Owner = msg.From,
+		-- initialize UserList[msg.From] if it doesn't exist
+		UserList[creator] = UserList[creator] or {
+			Owned = {},
+			Controlled = {},
+		}
+		UserList[creator].Owned[storeId] = true
+
+		KVStoreList[storeId] = {
+			Owner = creator,
 			Controllers = {},
 		}
 
-		msg.reply({
-			Action = ActionMap.spawnKVProcess .. "-Notice",
-			["KV-Store-Id"] = kvStoreSpawnMsg.Process,
-			Data = kvStoreSpawnMsg.Process,
+		ao.send({
+			Target = creator,
+			Action = ActionMap.spawnKVStore .. "-Notice",
+			["Message-Id"] = originalMsgId,
+			["KV-Store-Id"] = storeId,
+			Data = msg.Process,
 		})
 	end)
 

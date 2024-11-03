@@ -4,9 +4,10 @@ import {
   AOS_WASM,
   AO_LOADER_HANDLER_ENV,
   AO_LOADER_OPTIONS,
-  BUNDLED_CHESS_GAME_AOS_LUA,
-  BUNDLED_CHESS_REGISTRY_AOS_LUA,
+  BUNDLED_KV_REGISTRY_AOS_LUA,
+  BUNDLED_KV_STORE_AOS_LUA,
   DEFAULT_HANDLE_OPTIONS,
+  STUB_ADDRESS,
 } from './constants.js';
 
 /**
@@ -26,23 +27,29 @@ export async function createAosLoader(lua) {
     },
     AO_LOADER_HANDLER_ENV,
   );
+
   return {
     handle,
     memory: evalRes.Memory,
   };
 }
 
-export async function createChessRegistryAosLoader() {
-  return createAosLoader(BUNDLED_CHESS_REGISTRY_AOS_LUA);
+export async function createKVRegistryAosLoader() {
+  return createAosLoader(BUNDLED_KV_REGISTRY_AOS_LUA);
 }
 
-export async function createChessGameAosLoader() {
-  return createAosLoader(BUNDLED_CHESS_GAME_AOS_LUA);
+export async function createKVStoreAosLoader() {
+  return createAosLoader(BUNDLED_KV_STORE_AOS_LUA);
 }
 
 export async function getHandlers(sendMessage, memory) {
-  return sendMessage(
-    { Tags: [{ name: 'Action', value: 'Eval' }], Data: 'Handlers.list' },
+  const res = await sendMessage(
+    {
+      Tags: [{ name: 'Action', value: 'Eval' }],
+      Data: `ao.send({Data = require("json").encode(require(".utils").getHandlerNames(Handlers)), Target = "${STUB_ADDRESS}"})`,
+    },
     memory,
   );
+
+  return JSON.parse(res.Messages[0].Data);
 }

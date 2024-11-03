@@ -1,9 +1,7 @@
 -- the majority of this file came from https://github.com/permaweb/aos/blob/main/process/utils.lua
 
-local json = require(".common.json")
+local json = require("json")
 local utils = { _version = "0.0.1" }
-local crypto = require(".common.crypto.init")
-local Stream = crypto.utils.stream
 
 local function isArray(table)
 	if type(table) == "table" then
@@ -361,18 +359,11 @@ function utils.affiliationsForAddress(address, ants)
 	return affiliations
 end
 
--- returns hex string hash of the property value
-function utils.hashGlobalProperty(property)
-	local stream = Stream.fromString(json.encode(_G[property]))
-	local hash = crypto.digest.sha2_256(stream)
-	return tostring(hash.asHex())
-end
-
 function utils.notifySubscribers(data, addresses)
 	for _, address in ipairs(addresses) do
 		ao.send({
 			Target = address,
-			Action = "Subscriber-Notice",
+			Action = "KV-Store.Subscriber-Notice",
 			Data = json.encode(data),
 		})
 	end

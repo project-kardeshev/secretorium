@@ -10,7 +10,12 @@
     "format": "prettier --write .",
     "preview": "vite preview",
     "prepare": "husky install",
-    "postinstall": "husky install"
+    "postinstall": "husky install",
+    "kv-registry:build": "node processes/tools/bundle-aos.js --path=\"./processes/kv_registry_init.lua\" --output=\"./processes/dist/kv_registry/aos-bundled.lua\"",
+    "kv-store:build": "node processes/tools/bundle-aos.js --path=\"./processes/kv_store_init.lua\" --output=\"./processes/dist/kv_store/aos-bundled.lua\"",
+    "aos:build": "yarn kv-registry:build && yarn kv-store:build",
+    "aos:publish": "node processes/tools/bundle-aos.js && node tools/publish-aos.js",
+    "aos:test": "node --test --test-concurrency 1 --experimental-wasm-memory64 processes/tests/*.test.js"
   },
   "dependencies": {
     "@dha-team/arbundles": "^1.0.1",

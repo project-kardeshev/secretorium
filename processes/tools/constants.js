@@ -38,13 +38,13 @@ export const AOS_WASM = fs.readFileSync(
   ),
 );
 
-export const BUNDLED_CHESS_REGISTRY_AOS_LUA = fs.readFileSync(
-  path.join(__dirname, '../dist/chess/registry/aos-bundled.lua'),
+export const BUNDLED_KV_REGISTRY_AOS_LUA = fs.readFileSync(
+  path.join(__dirname, '../dist/kv_registry/aos-bundled.lua'),
   'utf-8',
 );
 
-export const BUNDLED_CHESS_GAME_AOS_LUA = fs.readFileSync(
-  path.join(__dirname, '../dist/chess/game/aos-bundled.lua'),
+export const BUNDLED_KV_STORE_AOS_LUA = fs.readFileSync(
+  path.join(__dirname, '../dist/kv_store/aos-bundled.lua'),
   'utf-8',
 );
 
