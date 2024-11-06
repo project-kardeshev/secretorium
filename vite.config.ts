@@ -13,7 +13,7 @@ export default defineConfig({
   },
   plugins: [
     react(),
-    nodePolyfills(),
+    nodePolyfills() as any,
     VitePWA({
       registerType: 'autoUpdate',
       injectRegister: false,
@@ -24,10 +24,11 @@ export default defineConfig({
       },
 
       manifest: {
-        name: 'vite-pwa-react-template',
-        short_name: 'vite-pwa-react-template',
-        description: 'vite-pwa-react-template',
-        theme_color: '#ffffff',
+        name: 'Secretorium',
+        short_name: 'Secretorium',
+        description:
+          'Decentralized vaults for using your secrets collaboratively',
+        theme_color: '#1f1f1f',
       },
 
       workbox: {
