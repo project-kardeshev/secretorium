@@ -22,7 +22,7 @@ acl.authorizationRequests = {} -- Store pending authorization requests by user
 ---@param permissions table A table of permissions associated with the role.
 -- Each permission can either be a boolean (true for global access on that action) or a table of path patterns.
 -- For path-specific permissions, use a table with patterns that define the paths on which the role has access.
--- For example, a role with `{ ["KV-Store.Set"] = { "data.entries", "config.settings" } }` can only modify these paths.
+-- For example, a role wivth `{ ["KV-Store.Set"] = { "data.entries", "config.settings" } }` can only modify these paths.
 function acl.defineRole(role, permissions)
 	acl.roles[role] = permissions or {}
 end

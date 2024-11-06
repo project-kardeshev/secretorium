@@ -27,16 +27,11 @@ kv_store.ActionMap = {
 	]]
 	getAuthorizationRequests = "KV-Store.Get-Authorization-Requests",
 	authorize = "KV-Store.Authorize",
+	reject = "KV-Store.Reject",
+	revokePermissions = "KV-Store.Revoke-Permissions",
+	removeRole = "KV-Store.Remove-Role",
 	accessControlList = "KV-Store.Access-Control-List",
 }
-
-Owner = ao.env.Process.Tags["Creator"] or Owner
-
-State = State or {
-	name = ao.env.Process.Tags["KV-Store-Name"],
-}
-Subscribers = Subscribers or { ao.env.Process.Tags["KV-Registry"] }
-Controllers = Controllers or { Owner }
 
 function kv_store.authorized(From)
 	if From == Owner then
@@ -79,6 +74,14 @@ function kv_store.getStateValue(path)
 end
 
 function kv_store.init()
+	Owner = ao.env.Process.Tags["X-Creator"] or Owner
+
+	State = State or {
+		name = ao.env.Process.Tags["KV-Store-Name"],
+	}
+
+	Subscribers = Subscribers or { ao.env.Process.Tags["KV-Registry"] }
+	Controllers = Controllers or { Owner }
 	local ActionMap = kv_store.ActionMap
 
 	acl.defineRole("admin", {
@@ -232,6 +235,83 @@ function kv_store.init()
 				permissions = permissions,
 			}),
 		})
+		local controllers = utils.deepCopy(Controllers)
+		for user, _ in pairs(acl.users) do
+			controllers[user] = true
+		end
+		utils.notifySubscribers({
+			Owner = Owner,
+			Controllers = controllers,
+		}, Subscribers)
+	end)
+
+	utils.createActionHandler(ActionMap.reject, function(msg)
+		assert(kv_store.authorized(msg.From), "unauthorized")
+		local user = msg.Address
+		assert(type(user) == "string", "User must be a string")
+
+		acl.clearAuthorizationRequest(user)
+
+		msg.reply({
+			Action = ActionMap.reject .. "-Notice",
+		})
+		ao.send({
+			Target = user,
+			Action = ActionMap.reject .. "-Notice",
+		})
+	end)
+
+	utils.createActionHandler(ActionMap.revokePermissions, function(msg)
+		assert(kv_store.authorized(msg.From), "unauthorized")
+		local user = msg.Address
+		assert(type(user) == "string", "User must be a string")
+
+		if acl.users[user] then
+			acl.users[user] = nil
+		end
+
+		msg.reply({
+			Action = ActionMap.revokePermissions .. "-Notice",
+		})
+		ao.send({
+			Target = user,
+			Action = ActionMap.revokePermissions .. "-Notice",
+		})
+		local controllers = utils.deepCopy(Controllers)
+		for u, _ in pairs(acl.users) do
+			controllers[u] = true
+		end
+		utils.notifySubscribers({
+			Owner = Owner,
+			Controllers = controllers,
+		}, Subscribers)
+	end)
+	utils.createActionHandler(ActionMap.removeRole, function(msg)
+		assert(kv_store.authorized(msg.From), "unauthorized")
+		local role = msg.Role
+		assert(type(role) == "string", "Role must be a string")
+		-- Remove the role from all users
+		local users = utils.deepCopy(acl.users)
+		for user, roles in pairs(users) do
+			acl.users[role] = nil
+			-- if the user has no roles, remove the user
+			if not next(roles) then
+				acl.users[user] = nil
+			end
+		end
+		-- Remove the role from the roles table
+		acl.roles[role] = nil
+		msg.reply({
+			Action = ActionMap.removeRole .. "-Notice",
+		})
+		local controllers = utils.deepCopy(Controllers)
+		for user, _ in pairs(acl.users) do
+			controllers[user] = true
+		end
+		utils.notifySubscribers({
+			Owner = Owner,
+			Controllers = controllers,
+		}, Subscribers)
 	end)
 
 	utils.createActionHandler(ActionMap.accessControlList, function(msg)

@@ -5,3 +5,9 @@ export const menuSound = new Howl({
   volume: 0.2,
   loop: false,
 });
+
+export const errorSound = new Howl({
+  src: ['/sounds/error-female.mp3'],
+  volume: 0.2,
+  loop: false,
+});

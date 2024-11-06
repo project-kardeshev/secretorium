@@ -10,4 +10,7 @@
   .modal-container {
     @apply fixed inset-0 z-50 flex items-center justify-center backdrop-blur-sm backdrop-filter scrollbar-thumb-primary;
   }
+  .action-button {
+    @apply rounded border border-secondary px-5 py-2 text-primary hover:text-white hover:scale-105 transition-all ease-in-out bg-background hover:bg-foreground;
+  }
 }

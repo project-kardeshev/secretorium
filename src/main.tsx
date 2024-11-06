@@ -16,6 +16,16 @@ import './index.css';
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     <AOWalletKit
+      config={{
+        permissions: [
+          'SIGN_TRANSACTION',
+          'ENCRYPT',
+          'DECRYPT',
+          'ACCESS_ADDRESS',
+          'SIGNATURE',
+          'ACCESS_PUBLIC_KEY',
+        ],
+      }}
       strategies={[
         new ArConnectStrategy(),
         new ArweaveWebWalletStrategy(),

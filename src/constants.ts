@@ -1,1 +1,2 @@
-export const SECRETORIUM_REGISTRY_ID = '';
+export const SECRETORIUM_REGISTRY_ID =
+  'RTczBEQqP-CtbGadf541tLUZ1ZCXWuZ7G4YxHWh1o8Q';

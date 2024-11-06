@@ -61,7 +61,10 @@ export function RadialMenuModal({
           <button
             key={index}
             className={`absolute ${item.className || ''}`}
-            onClick={item.onClick}
+            onClick={() => {
+              item.onClick();
+              setShowMenu(false);
+            }}
             onMouseEnter={() => setHoveredLabel(item.label)}
             onMouseLeave={() => setHoveredLabel(null)}
             style={{

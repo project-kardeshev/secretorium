@@ -1,6 +1,6 @@
 import { SIG_CONFIG, SignatureConfig } from '@dha-team/arbundles';
 import { CollaboratorConfig } from '@src/types/vault';
-import { split, combine } from 'shamir-secret-sharing';
+import { split } from 'shamir-secret-sharing';
 
 import { encryptWithArweavePublicKey } from './arweave';
 import { toB64Url } from './encoding';

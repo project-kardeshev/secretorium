@@ -4,7 +4,6 @@ import { before, describe, it } from 'node:test';
 import {
   AO_LOADER_HANDLER_ENV,
   DEFAULT_HANDLE_OPTIONS,
-  STUB_ADDRESS,
 } from '../tools/constants.js';
 import { createKVStoreAosLoader, getHandlers } from '../tools/utils.js';
 
@@ -76,49 +75,6 @@ describe('KVStore', async () => {
       mem,
     );
     return JSON.parse(res.Messages[0].Data);
-  }
-
-  async function setControllers({ controllers, memory }) {
-    return sendMessage(
-      {
-        Tags: [
-          { name: 'Action', value: 'KV-Store.Set-Controllers' },
-          { name: 'Controllers', value: JSON.stringify(controllers) },
-        ],
-      },
-      memory,
-    );
-  }
-
-  async function getControllers(mem) {
-    const res = await sendMessage(
-      {
-        Tags: [{ name: 'Action', value: 'Info' }],
-      },
-      mem,
-    );
-    return res.Messages[0].tags.find((tag) => tag.name === 'Controllers').value;
-  }
-
-  async function setSubscribers({ subscribers, memory }) {
-    return sendMessage(
-      {
-        Tags: [
-          { name: 'Action', value: 'KV-Store.Set-Subscribers' },
-          { name: 'Subscribers', value: JSON.stringify(subscribers) },
-        ],
-      },
-      memory,
-    );
-  }
-  async function getSubscribers(mem) {
-    const res = await sendMessage(
-      {
-        Tags: [{ name: 'Action', value: 'Info' }],
-      },
-      mem,
-    );
-    return res.Messages[0].tags.find((tag) => tag.name === 'Subscribers').value;
   }
 
   it('should get store info', async () => {

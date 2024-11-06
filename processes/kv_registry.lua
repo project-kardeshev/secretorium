@@ -1,4 +1,4 @@
-local kvRegistry = package.loaded["kv_registry"] or {}
+local kvRegistry = package.loaded[".kv_registry"] or {}
 
 kvRegistry.ActionMap = {
 	spawnKVStore = "KV-Registry.Spawn-KV-Store",
@@ -60,6 +60,12 @@ function kvRegistry.init()
 		assert(creator, "msg['X-Creator'] is required")
 		assert(originalMsgId, "msg['X-Original-Msg-Id'] is required")
 
+		Send({
+			Target = storeId,
+			Action = "Eval",
+			Data = KVStoreCode,
+		})
+
 		-- initialize UserList[msg.From] if it doesn't exist
 		UserList[creator] = UserList[creator] or {
 			Owned = {},
@@ -99,7 +105,7 @@ function kvRegistry.init()
 			Target = msg.From,
 			Action = ActionMap.getKVStores .. "-Notice",
 			["Message-Id"] = msg.Id,
-			Data = json.encode(utils.affiliationsForAddress(address, KVStoreList)),
+			Data = json.encode(utils.affiliationsForAddress(address, kvRegistry.KVStoreList)),
 		})
 	end)
 end

@@ -1,16 +1,28 @@
 import { create } from 'zustand';
 
+import {
+  SecretoriumRegistryProcessReadable,
+  SecretoriumRegistryProcessWritable,
+} from './processes/secretorium_registry';
+
 export type GlobalState = {
   showMenu: boolean;
+  secretoriumRegistry:
+    | SecretoriumRegistryProcessReadable
+    | SecretoriumRegistryProcessWritable;
 };
 
 export type GlobalStateActions = {
   setShowMenu: (showMenu: boolean) => void;
+  setSecretoriumRegistry: (
+    s: SecretoriumRegistryProcessReadable | SecretoriumRegistryProcessWritable,
+  ) => void;
   reset: () => void;
 };
 
 export const initialGlobalState: GlobalState = {
   showMenu: false,
+  secretoriumRegistry: new SecretoriumRegistryProcessReadable(),
 };
 
 export class GlobalStateActionBase implements GlobalStateActions {
@@ -23,6 +35,14 @@ export class GlobalStateActionBase implements GlobalStateActions {
     this.set({ showMenu });
   };
 
+  setSecretoriumRegistry = (
+    secretoriumRegistry:
+      | SecretoriumRegistryProcessReadable
+      | SecretoriumRegistryProcessWritable,
+  ) => {
+    secretoriumRegistry.kvRegistry.process.startPolling();
+    this.set({ secretoriumRegistry });
+  };
   reset = () => {
     this.set({ ...this.initialGlobalState });
   };

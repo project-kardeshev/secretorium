@@ -1,13 +1,7 @@
 import { menuSound } from '@src/utils/sounds';
 import { motion } from 'framer-motion';
 import { Howl } from 'howler';
-import {
-  CSSProperties,
-  ForwardedRef,
-  ReactNode,
-  useEffect,
-  useRef,
-} from 'react';
+import { CSSProperties, ReactNode, useEffect, useRef } from 'react';
 
 function Modal({
   children,

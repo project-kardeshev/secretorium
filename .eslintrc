@@ -42,6 +42,7 @@
     "no-unused-vars": "off",
     "@typescript-eslint/no-unused-vars": ["error"],
     "jsx-no-inline-style/no-inline-style": "error",
-    "@typescript-eslint/no-explicit-any": "off"
+    "@typescript-eslint/no-explicit-any": "off",
+    "no-unsafe-optional-chaining": "off"
   }
 }

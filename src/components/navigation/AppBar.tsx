@@ -1,10 +1,6 @@
-import {
-  useConnect,
-  useConnection,
-  useProfileModal,
-} from '@project-kardeshev/ao-wallet-kit';
+import { useConnect, useConnection } from '@project-kardeshev/ao-wallet-kit';
 import { useGlobalState } from '@src/services/useGlobalState';
-import { User, Wallet } from 'lucide-react';
+import { Wallet } from 'lucide-react';
 
 export function AppBar() {
   const { connected } = useConnection();
@@ -34,6 +30,7 @@ export function AppBar() {
           className="text-white rounded-full bg-[rgb(0,0,0,0.5)] hover:scale-110 transition-all shadow-3xl"
         >
           <img
+            alt="menu icon"
             width={'75px'}
             src={'/images/menu-icon.webp'}
             className="rounded-full"

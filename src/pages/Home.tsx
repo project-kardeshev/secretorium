@@ -8,6 +8,7 @@ export function Home() {
           <h1 className="flex gap-2 pb-2 items-center sm:text-md lg:text-xl tracking-[.8rem] lg:tracking-[1.15rem] font-bold text-primary border-b border-secondary">
             Secretorium
             <img
+              alt="collaborator icon"
               className="rounded w-[25px] lg:w-[40px]"
               src={'/images/collaborator-icon.webp'}
             />
@@ -32,10 +33,7 @@ export function Home() {
         </div>
 
         <div className="flex size-full justify-center items-end pb-10">
-          <Link
-            to={`/vaults?action=create`}
-            className="rounded border border-secondary px-5 py-2 text-primary hover:text-white hover:scale-105 transition-all ease-in-out bg-background hover:bg-foreground"
-          >
+          <Link to={`/vaults?action=create`} className="action-button">
             Get Started
           </Link>
         </div>
