@@ -3718,8 +3718,10 @@
   resolved "https://registry.yarnpkg.com/@pkgjs/parseargs/-/parseargs-0.11.0.tgz#a77ea742fab25775145434eb1d2328cf5013ac33"
   integrity sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg==
 
-"@project-kardeshev/ao-sdk@../ao-sdk":
-  version "1.0.0-alpha.4"
+"@project-kardeshev/ao-sdk@1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@project-kardeshev/ao-sdk/-/ao-sdk-1.0.0-alpha.3.tgz#9c357ee9b98a41027490908b08529b60aa1c35f0"
+  integrity sha512-vf0QBzdHXRAwXp07ZR62GUmtfNRhokbNbjywrGg0kgY7qSKCCQZXkkPB4ToEwXFCZOumt3fLHi/GKwna3rjalQ==
   dependencies:
     "@dha-team/arbundles" "^1.0.1"
     "@permaweb/ao-loader" "^0.0.36"
@@ -3732,10 +3734,10 @@
     winston "^3.15.0"
     zod "^3.23.8"
 
-"@project-kardeshev/ao-sdk@1.0.0-alpha.5":
-  version "1.0.0-alpha.5"
-  resolved "https://registry.yarnpkg.com/@project-kardeshev/ao-sdk/-/ao-sdk-1.0.0-alpha.5.tgz#a3e42d0b413225bc7ce208384c014bbd5390379e"
-  integrity sha512-n20elCOZsBbI5XRTrj0Pr4Cn1xwfT6Lrb0jWc9NKH3Y27RJa5+fel/nEvotPkfP/FJEuORIJ1P9visIoXyemzw==
+"@project-kardeshev/ao-sdk@1.0.0-alpha.6":
+  version "1.0.0-alpha.6"
+  resolved "https://registry.yarnpkg.com/@project-kardeshev/ao-sdk/-/ao-sdk-1.0.0-alpha.6.tgz#a1a152ae69d3df1575f37bb9ebb2453338d7ffbb"
+  integrity sha512-0iayTRa2XdVgSVBzCUf+biR2vhFfPEbFRUztaeaU533sKoH2GAkew2Wna4MKr2Yl5fXucvmyI/k+0o68pMutRQ==
   dependencies:
     "@dha-team/arbundles" "^1.0.1"
     "@permaweb/ao-loader" "^0.0.36"
@@ -3763,7 +3765,7 @@
     "@metamask/eth-sig-util" "^8.0.0"
     "@metamask/providers" "^18.1.0"
     "@othent/kms" "2.1.1"
-    "@project-kardeshev/ao-sdk" "1.0.0-alpha.5"
+    "@project-kardeshev/ao-sdk" "1.0.0-alpha.3"
     "@tanstack/react-query" "^5.59.15"
     "@wagmi/connectors" "^5.2.2"
     "@wagmi/core" "^2.13.9"
